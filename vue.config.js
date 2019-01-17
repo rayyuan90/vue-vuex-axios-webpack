@@ -50,7 +50,7 @@ module.exports = {
   // https://cli.vuejs.org/guide/webpack.html#simple-configuration
 
   // configureWebpack: config => {
-  //   // add here
+  //  // add here
   // },
 
   // webpack 链接 API，用于生成和修改 webapck 配置
