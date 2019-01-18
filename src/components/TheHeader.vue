@@ -22,7 +22,7 @@
             exact
             :to="{ name: 'login' }"
           >
-            <i class="ion-compose"></i>注册
+            <i class="ion-compose"></i>登陆
           </router-link>
         </li>
         <li class="nav-item">
@@ -32,7 +32,7 @@
             exact
             :to="{ name: 'register' }"
           >
-            <i class="ion-compose"></i>登陆
+            <i class="ion-compose"></i>注册
           </router-link>
         </li>
       </ul>
