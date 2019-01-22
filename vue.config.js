@@ -115,7 +115,7 @@ module.exports = {
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
     overlay: {
-      warnings: true,
+      warnings: false,
       errors: true
     },
 
