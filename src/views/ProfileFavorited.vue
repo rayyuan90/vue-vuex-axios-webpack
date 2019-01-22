@@ -6,10 +6,12 @@
 </template>
 
 <script>
-import RwvArticleList from "@/components/ArticleList";
+import RwvArticleList from '@/components/ArticleList';
+import { checkAuth } from '@/mixins/mixin';
 
 export default {
-  name: "RwvProfileFavorited",
+  name: 'RwvProfileFavorited',
+  mixins: [checkAuth],
   components: {
     RwvArticleList
   },
