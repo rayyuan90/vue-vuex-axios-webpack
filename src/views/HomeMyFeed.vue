@@ -3,10 +3,12 @@
 </template>
 
 <script>
-import RwvArticleList from "@/components/ArticleList";
+import RwvArticleList from '@/components/ArticleList';
+import { checkAuth } from '@/mixins/mixin';
 
 export default {
-  name: "rwv-home-my-feed",
+  name: 'rwv-home-my-feed',
+  mixins: [checkAuth],
   components: {
     RwvArticleList
   }
