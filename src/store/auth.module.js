@@ -1,13 +1,13 @@
-import ApiService from "@/common/api.service";
-import JwtService from "@/common/jwt.service";
+import ApiService from '@/common/api.service';
+import JwtService from '@/common/jwt.service';
 import {
   LOGIN,
   LOGOUT,
   REGISTER,
   CHECK_AUTH,
   UPDATE_USER
-} from "./actions.type";
-import { SET_AUTH, PURGE_AUTH, SET_ERROR } from "./mutations.type";
+} from './actions.type';
+import { SET_AUTH, PURGE_AUTH, SET_ERROR } from './mutations.type';
 
 const state = {
   errors: null,
@@ -27,7 +27,7 @@ const getters = {
 const actions = {
   [LOGIN](context, credentials) {
     return new Promise(resolve => {
-      ApiService.post("users/login", { user: credentials })
+      ApiService.post('users/login', { user: credentials })
         .then(({ data }) => {
           context.commit(SET_AUTH, data.user);
           resolve(data);
@@ -42,7 +42,7 @@ const actions = {
   },
   [REGISTER](context, credentials) {
     return new Promise((resolve, reject) => {
-      ApiService.post("users", { user: credentials })
+      ApiService.post('users', { user: credentials })
         .then(({ data }) => {
           context.commit(SET_AUTH, data.user);
           resolve(data);
@@ -56,7 +56,7 @@ const actions = {
   [CHECK_AUTH](context) {
     if (JwtService.getToken()) {
       ApiService.setHeader();
-      ApiService.get("user")
+      ApiService.get('user')
         .then(({ data }) => {
           context.commit(SET_AUTH, data.user);
         })
@@ -79,7 +79,7 @@ const actions = {
       user.password = password;
     }
 
-    return ApiService.put("user", user).then(({ data }) => {
+    return ApiService.put('user', user).then(({ data }) => {
       context.commit(SET_AUTH, data.user);
       return data;
     });
@@ -103,7 +103,6 @@ const mutations = {
     JwtService.destroyToken();
   }
 };
-
 export default {
   state,
   actions,

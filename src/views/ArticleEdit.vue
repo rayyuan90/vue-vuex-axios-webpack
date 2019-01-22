@@ -11,7 +11,7 @@
                   type="text"
                   class="form-control form-control-lg"
                   v-model="article.title"
-                  placeholder="Article Title"
+                  placeholder="文章标题"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -19,7 +19,7 @@
                   type="text"
                   class="form-control"
                   v-model="article.description"
-                  placeholder="What's this article about?"
+                  placeholder="文章主题"
                 />
               </fieldset>
               <fieldset class="form-group">
@@ -27,7 +27,7 @@
                   class="form-control"
                   rows="8"
                   v-model="article.body"
-                  placeholder="Write your article (in markdown)"
+                  placeholder="写文章（使用markdown语言）"
                 >
                 </textarea>
               </fieldset>
@@ -35,7 +35,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Enter tags"
+                  placeholder="标签"
                   v-model="tagInput"
                   v-on:keypress.enter.prevent="addTag(tagInput);"
                 />
@@ -57,7 +57,7 @@
               class="btn btn-lg pull-xs-right btn-primary"
               type="submit"
             >
-              Publish Article
+              发布
             </button>
           </form>
         </div>
@@ -67,9 +67,9 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import store from "@/store";
-import RwvListErrors from "@/components/ListErrors";
+import { mapGetters } from 'vuex';
+import store from '@/store';
+import RwvListErrors from '@/components/ListErrors';
 import {
   ARTICLE_PUBLISH,
   ARTICLE_EDIT,
@@ -77,10 +77,10 @@ import {
   ARTICLE_EDIT_ADD_TAG,
   ARTICLE_EDIT_REMOVE_TAG,
   ARTICLE_RESET_STATE
-} from "@/store/actions.type";
+} from '@/store/actions.type';
 
 export default {
-  name: "RwvArticleEdit",
+  name: 'RwvArticleEdit',
   components: { RwvListErrors },
   props: {
     previousArticle: {
@@ -119,7 +119,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["article"])
+    ...mapGetters(['article'])
   },
   methods: {
     onPublish(slug) {
@@ -130,7 +130,7 @@ export default {
         .then(({ data }) => {
           this.inProgress = false;
           this.$router.push({
-            name: "article",
+            name: 'article',
             params: { slug: data.article.slug }
           });
         })

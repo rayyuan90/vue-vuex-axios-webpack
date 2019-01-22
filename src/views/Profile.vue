@@ -12,7 +12,7 @@
                 class="btn btn-sm btn-outline-secondary action-btn"
                 :to="{ name: 'settings' }"
               >
-                <i class="ion-gear-a"></i> Edit Profile Settings
+                <i class="ion-gear-a"></i> 修改信息
               </router-link>
             </div>
             <div v-else>
@@ -73,20 +73,20 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 import {
   FETCH_PROFILE,
   FETCH_PROFILE_FOLLOW,
   FETCH_PROFILE_UNFOLLOW
-} from "@/store/actions.type";
+} from '@/store/actions.type';
 
 export default {
-  name: "RwvProfile",
+  name: 'RwvProfile',
   mounted() {
     this.$store.dispatch(FETCH_PROFILE, this.$route.params);
   },
   computed: {
-    ...mapGetters(["currentUser", "profile", "isAuthenticated"])
+    ...mapGetters(['currentUser', 'profile', 'isAuthenticated'])
   },
   methods: {
     isCurrentUser() {
