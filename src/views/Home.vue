@@ -58,20 +58,30 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import RwvTag from "@/components/VTag";
-import { FETCH_TAGS } from "@/store/actions.type";
+import { mapGetters } from 'vuex';
+import RwvTag from '@/components/VTag';
+import { FETCH_TAGS } from '@/store/actions.type';
+import { checkAuth } from '@/mixins/mixin';
 
+// var checkAuth = {
+//   beforeCreate(){
+//     if(!this.$store.state.auth.isAuthenticated){
+//       this.$router.push({ name: "login" });
+//       return;
+//     }
+//   },
+// }
 export default {
-  name: "home",
+  name: 'home',
   components: {
     RwvTag
   },
+  mixins: [checkAuth],
   mounted() {
     this.$store.dispatch(FETCH_TAGS);
   },
   computed: {
-    ...mapGetters(["isAuthenticated", "tags"]),
+    ...mapGetters(['isAuthenticated', 'tags']),
     tag() {
       return this.$route.params.tag;
     }
