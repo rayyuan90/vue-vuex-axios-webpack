@@ -1,0 +1,25 @@
+@import '/scss/master';
+
+// .page-title {
+//   color: $title-color;
+// }
+@include responsive(xs) {
+  .home-page .banner h1 {
+    color: red;
+  }
+}
+@include responsive(sm) {
+  .home-page .banner h1 {
+    color: green;
+  }
+}
+@include responsive(md) {
+  .home-page .banner h1 {
+    color: yellow;
+  }
+}
+@include responsive(lg) {
+  .home-page .banner h1 {
+    color: black;
+  }
+}

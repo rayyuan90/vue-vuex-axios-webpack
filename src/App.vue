@@ -9,6 +9,7 @@
 <script>
 import RwvHeader from '@/components/TheHeader';
 import RwvFooter from '@/components/TheFooter';
+import './App.scss';
 
 export default {
   name: 'App',
