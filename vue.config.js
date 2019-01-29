@@ -101,6 +101,14 @@ module.exports = {
       .use('graphql-tag/loader')
       .loader('graphql-tag/loader')
       .end();
+    // css {}
+    config.module
+      .rule('maincss')
+      .test(/\.scss$/)
+      .use(['vue-style-loader', 'css-loader', 'postcss-loader'])
+      .loader('sass-loader')
+      .options({ data: `@import "src/scss/master.scss";` })
+      .end();
   },
 
   // 配置高于chainWebpack中关于 css loader 的配置
