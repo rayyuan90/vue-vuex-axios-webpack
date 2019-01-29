@@ -5,7 +5,7 @@
 // }
 @include responsive(xs) {
   .home-page .banner h1 {
-    color: red;
+    color: #fff;
   }
 }
 @include responsive(sm) {
