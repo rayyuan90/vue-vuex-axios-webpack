@@ -107,7 +107,9 @@ module.exports = {
       .test(/\.scss$/)
       .use(['vue-style-loader', 'css-loader', 'postcss-loader'])
       .loader('sass-loader')
-      .options({ data: `@import "src/scss/master.scss";` })
+      .options({
+        data: `@import "src/scss/master.scss";`
+      })
       .end();
   },
 
@@ -141,7 +143,26 @@ module.exports = {
       warnings: false,
       errors: true
     },
-
+    // proxy: {
+    //   '/articles': {
+    //     target: 'https://ssltest.ngarihealth.com/weixin-test',
+    //     changeOrigin: true,
+    //     secure: false,
+    //     pathRewrite: {
+    //       '^/articles': ''
+    //     }
+    //   }
+    // },
+    proxy: {
+      '/api': {
+        target: 'https://ssltest.ngarihealth.com/weixin-test',
+        // target: 'https://other-server.example.com',
+        changeOrigin: true,
+        secure: false,
+        pathRewrite: { '^/api': '' }
+      }
+    },
+    // disableHostCheck: true,
     open: true,
 
     host: 'localhost',
@@ -150,9 +171,9 @@ module.exports = {
 
     https: false,
 
-    hotOnly: false,
+    hotOnly: false
 
-    proxy: null
+    // proxy: null
 
     //  before: app => {}
   },
