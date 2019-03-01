@@ -57,6 +57,12 @@
   </div>
 </template>
 
+<style lang="scss" scoped>
+.home-page .logo-font {
+  color: #fff;
+}
+</style>
+
 <script>
 import { mapGetters } from 'vuex';
 import RwvTag from '@/components/VTag';
