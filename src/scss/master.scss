@@ -2,3 +2,8 @@
 @import 'partials/variables';
 @import 'partials/functions';
 @import 'partials/mixins';
+
+
+html {
+   font-size: $browser-default-font-size;
+}
