@@ -1,28 +1,24 @@
-[![RealWorld Frontend](https://img.shields.io/badge/realworld-frontend-%23783578.svg)](http://realworld.io)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
 ### ![RealWorld Example App](./static/rwv-logo.png)
 
-> Vue.js codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
+> 项目包含常用的增删改查功能 可作为实际项目开发实例 [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
-Project demo is available at https://vue-vuex-realworld.netlify.com/#/
+项目地址： https://vue-vuex-realworld.netlify.com/#/
 
-This codebase was created to demonstrate a fully fledged fullstack application built with **Vue.js** including CRUD operations, authentication, routing, pagination, and more.
+项目代码包含了整套的数据库增删该查，前端的组件分类，路由，验证，分页，vuex 状态管理等 感谢 **Vue.js** 
 
-We've gone to great lengths to adhere to the **Vue.js** community styleguides & best practices.
 
-For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
+更多的前端 后端 内容 请参考 [RealWorld](https://github.com/gothinkster/realworld).
 
-## Getting started
+## 项目开发
 
-Before contributing please read the following:
+开始开发前请阅读:
 
 1. [RealWorld guidelines](https://github.com/gothinkster/realworld/tree/master/spec) for implementing a new framework,
 2. [RealWorld frontend instructions](https://github.com/gothinkster/realworld-starter-kit/blob/master/FRONTEND_INSTRUCTIONS.md)
 3. [Realworld API endpoints](https://github.com/gothinkster/realworld/tree/master/api)
 4. [Vue.js styleguide](https://vuejs.org/v2/style-guide/index.html). Priority A and B categories must be respected.
 
-The stack is built using [vue-cli webpack](https://github.com/vuejs-templates/webpack) so to get started all you have to do is:
+项目使用vue 脚手架 [vue-cli webpack](https://github.com/vuejs-templates/webpack) 项目启动只需要如下操作:
 
 ``` bash
 # install dependencies
@@ -31,7 +27,7 @@ The stack is built using [vue-cli webpack](https://github.com/vuejs-templates/we
 > yarn serve
 ```
 
-Other commands available are:
+其他的command 操作:
 
 ``` bash
 # build for production with minification
@@ -41,16 +37,18 @@ yarn run build
 yarn run test:unit
 ```
 
-# To know
+# 项目的框架
 
-Current arbitrary choices are:
+目前的框架:
 
-- Vuex modules for store
-- Vue-axios for ajax requests
-- 'rwv' as prefix for components
+- Vuex 是存储 store
+- Vue-axios for ajax 请求
+- 'rwv' 是组件的前缀
 
-These can be changed when the contributors reach a consensus.
+可自行修改
 
-# Connect
 
-Join us on [Discord](https://discord.gg/NE2jNmg)
+# 项目感谢
+
+[vue-realworld-example-app] (https://github.com/rayyuan90/vue-realworld-example-app)
+
