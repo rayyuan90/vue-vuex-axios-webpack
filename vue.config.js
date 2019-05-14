@@ -143,20 +143,9 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    // proxy: {
-    //   '/articles': {
-    //     target: 'https://ssltest.ngarihealth.com/weixin-test',
-    //     changeOrigin: true,
-    //     secure: false,
-    //     pathRewrite: {
-    //       '^/articles': ''
-    //     }
-    //   }
-    // },
     proxy: {
-      '/': {
-        target: 'https://ssltest.ngarihealth.com/ehealth-base-feature1/',
-        // target: 'https://other-server.example.com',
+      '/': {      
+        target: 'https://other-server.example.com',
         changeOrigin: true,
         secure: false
         // pathRewrite: { '^/': '' }
